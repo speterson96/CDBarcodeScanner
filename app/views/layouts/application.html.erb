@@ -6,6 +6,12 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
+<nav>
+  <%=link_to_unless_current 'Home', root_url %>
+  <%=link_to_unless_current 'Inventory', inventory_url %>
+
+</nav>
 <body>
 
 <%= yield %>
