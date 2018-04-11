@@ -8,4 +8,3 @@ class CreateInventories < ActiveRecord::Migration
     end
   end
 end
-Added models
