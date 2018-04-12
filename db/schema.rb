@@ -11,18 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180409193753) do
+ActiveRecord::Schema.define(version: 20180412191044) do
 
-  create_table "inventories", primary_key: "upc", force: :cascade do |t|
-    t.string "title"
-    t.string "brand"
-    t.string "description"
+  create_table "inventories", id: false, force: :cascade do |t|
+    t.integer "upc",         limit: 8
+    t.string  "title"
+    t.string  "brand"
+    t.string  "description"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string  "user_email"
-    t.string  "user_password"
-    t.integer "upc"
+    t.string "user_email"
+    t.string "user_password"
   end
 
 end
