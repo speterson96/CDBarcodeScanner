@@ -1,7 +1,5 @@
 class Inventory < ActiveRecord::Base
-  belong_to :User
+  belongs_to :User
   #self.primary_key = "upc"
-  
-  
   
 end
