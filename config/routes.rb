@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get '/signup', to: 'login_system#signup', as: 'signup'
   get '/userInfo', to: 'login_system#userInfo', as: 'userInfo'
   
+  get '/addItemToInventory', to: 'inventory#addItem', as: 'addItemToInventory'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
