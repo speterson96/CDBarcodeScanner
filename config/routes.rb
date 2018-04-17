@@ -1,11 +1,24 @@
 Rails.application.routes.draw do
 
+  get 'sessions/create'
+
+  get 'sessions/destroy'
+
   root to: 'home#index'
   
-  get '/inventory', to: 'home#inventory', as: 'inventory'
+  get '/inventory', to: 'inventory#index', as: 'inventory'
   get '/login', to: 'login_system#login', as: 'login'
   get '/signup', to: 'login_system#signup', as: 'signup'
   get '/userInfo', to: 'login_system#userInfo', as: 'userInfo'
+  
+  get '/addItemToInventory', to: 'inventory#addItem', as: 'addItemToInventory'
+  #Google Auth 
+  get 'auth/:provider/callback', to: 'sessions#create'
+  get 'auth/failure', to: redirect('/')
+  get 'signout', to: 'sessions#destroy', as: 'signout'
+
+  resources :sessions, only: [:create, :destroy]
+  resource :home, only: [:index]
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
