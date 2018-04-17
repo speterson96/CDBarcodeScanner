@@ -18,23 +18,27 @@ class InventoryController < ApplicationController
         :accept => :json,
       }
     )
+    
     puts "status: #{response.code}"
     puts "----headers----"
     puts response.headers
     puts "----body----"
     puts response
-   
-   @inventory = Inventory.create(
+        
+    json = JSON.parse(response.body)["items"].first
+    
+    @inventory = Inventory.create(
       upc: params[:upc], 
-      title: response.title,
-      brand: response.brand,
-      description: response.description
+      title: json['title'],
+      brand: json['brand'],
+      description: json['description']
     )
     if @inventory.save
       respond_to do |format|
           format.html {redirect_to "/inventory"}
       end 
-    end   
+    end 
+    
   end
   
 end
