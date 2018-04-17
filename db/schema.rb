@@ -11,10 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180412191044) do
+ActiveRecord::Schema.define(version: 20180409193753) do
 
   create_table "inventories", id: false, force: :cascade do |t|
-    t.integer "upc",         limit: 8
+    t.string  "upc"
     t.string  "title"
     t.string  "brand"
     t.string  "description"
