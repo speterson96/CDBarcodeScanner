@@ -59,7 +59,17 @@
   padding: 0;
 }
 
-
+.omniauth {
+  color: rgba(255, 255, 255, 1);
+  display: inline-block;
+  float: right;
+  font-size: 2em;
+  text-align: center;
+  text-decoration: none;
+  margin: auto;
+  margin-right: 1em;
+  padding: 5px 5px 8px 5px;
+}
 
 body {
   width: 100%;
