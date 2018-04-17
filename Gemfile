@@ -25,6 +25,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Rest client for communicating with UPC API
 gem 'rest-client', '~> 2.0', '>= 2.0.2'
+
+#Getting Google amuniauth to work
+gem "omniauth-google-oauth2", "~> 0.2.1"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
