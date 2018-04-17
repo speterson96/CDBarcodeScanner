@@ -15,6 +15,12 @@
   margin-right: 7em;
   
 }
+
+.logoImage {
+  float: left;
+  margin-left: 0em;
+  
+}
 .moveBelowHeader {
   margin-top: 105px;
   margin-left: 20px;
@@ -58,8 +64,6 @@
   margin: 0;
   padding: 0;
 }
-
-
 
 body {
   width: 100%;
@@ -119,11 +123,12 @@ body {
       display: inline;
       float: left;
       margin: 0;
+
     }
 
     &__list {
       margin-top: 0;
-      padding-left: 110px;
+      padding-left: 440px;
       text-align: left;
       list-style: none;
       
@@ -198,7 +203,31 @@ body {
   83.3%,95.96% {transform:translate3d(0,-25%,0);}
 }
 
+//Inventory Table
 
+h1 {
+  font-family: 'Handlee', cursive;
+  color: rgba(140, 49, 209, 1);
+}
+table {
+    font-family: 'Handlee', cursive;
+    border-collapse: collapse;
+    width: 98%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: rgb(230, 210, 249)}
+
+th {
+    background-color: rgba(140, 49, 209, 1);
+    color: lavender;
+ }
+
+//Footer
 .footer {
     position: fixed;
     bottom: 0;

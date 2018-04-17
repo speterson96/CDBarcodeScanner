@@ -9,6 +9,7 @@
 </head>
 
 <nav  class="navbar">
+
   <ul class="navul">
   
     <li><%=link_to 'Home', root_url %></li>
@@ -18,6 +19,7 @@
     <li><%=link_to 'My Account', userInfo_url %></li>
     
   </ul>
+
 </nav>
 
 <body>
@@ -25,4 +27,9 @@
 <%= yield %>
 
 </body>
+
+<div class="footer">
+&copy; Copyright 2018 Personal Inventory Systems
+</div>
+
 </html>
