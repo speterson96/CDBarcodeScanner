@@ -1,0 +1,22 @@
+<div class="moveBelowHeader">
+		<form action="/addItemToInventory" method="get">
+
+           <label for="upc">Please enter the items UPC:</label>
+           <input type="text" name="upc" id="upc" value="">
+           <br><br>
+
+           <input type="submit" name="submit" value="Submit">
+          
+    </form>
+    <br><br>
+    
+    <% @inventory.each do |item| %>
+      <div class="item">
+          <p class="saveLabel">upc: </p><p class="score"><%= item.upc %></p>
+          <p class="saveLabel">Title: </p><p class="_lives"><%= item.title %></p>
+          <p class="saveLabel">Brand: </p><p class="bullets"><%= item.brand %></p>
+          <p class="saveLabel">Description: </p><p class="difficulty"><%= item.description %></p>
+    </div>
+    <% end %> 
+
+</div>
