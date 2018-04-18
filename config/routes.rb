@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get '/login', to: 'login_system#login', as: 'login'
   get '/signup', to: 'login_system#signup', as: 'signup'
   get '/userInfo', to: 'login_system#userInfo', as: 'userInfo'
+  get '/reports', to: 'inventory#reports', as: 'reports'
   
   get '/addItemToInventory', to: 'inventory#addItem', as: 'addItemToInventory'
   #Google Auth 
