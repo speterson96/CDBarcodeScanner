@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   root to: 'home#index'
   
   get '/inventory', to: 'inventory#index', as: 'inventory'
-  get '/login', to: 'login_system#login', as: 'login'
+  get '/login', to: redirect('/auth/google_oauth2'), as: 'login'
   get '/signup', to: 'login_system#signup', as: 'signup'
   get '/userInfo', to: 'login_system#userInfo', as: 'userInfo'
   get '/reports', to: 'inventory#reports', as: 'reports'
