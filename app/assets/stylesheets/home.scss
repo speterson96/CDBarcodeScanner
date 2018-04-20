@@ -11,9 +11,16 @@
 }
 
 .barcodeLink {
+  border-style: solid;
   float: right;
-  margin-right: 7em;
-  
+  margin-right: 5em;
+  padding: 10px;
+  width: 105px;
+}
+
+.barcodeLink h3 {
+  text-align: center;
+  margin-bottom: 5px;
 }
 
 .img-circle {
@@ -27,7 +34,7 @@
   
 }
 .moveBelowHeader {
-  margin-top: 105px;
+  margin-top: 30px;
   margin-left: 20px;
 }
 
