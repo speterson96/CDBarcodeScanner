@@ -33,6 +33,7 @@
   margin-left: 0em;
   
 }
+
 .moveBelowHeader {
   margin-top: 30px;
   margin-left: 20px;
@@ -256,6 +257,20 @@ th {
 //Footer
 .footer {
     position: fixed;
-    bottom: 0;
+    bottom: 1em;
     color: rgba(140, 49, 209, 1);
+    text-align: center;
+    width: 100%;
+}
+
+.contentCreators {
+  
+}
+
+.footer ul {
+  list-style:none;
+  float: left;
+}
+.footer p {
+  clear: left;
 }
