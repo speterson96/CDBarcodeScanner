@@ -222,7 +222,7 @@ body {
   83.3%,95.96% {transform:translate3d(0,-25%,0);}
 }
 
-//Inventory Table
+//Reports Table
 
 h1 {
   font-family: 'Handlee', cursive;
@@ -245,6 +245,35 @@ th {
     background-color: rgba(140, 49, 209, 1);
     color: lavender;
  }
+ 
+//Inventory Page
+// Create three unequal columns that floats next to each other 
+.column {
+    float: left;
+    padding: 10px;
+}
+
+// Left and right column 
+.column.side {
+    width: 25%;
+}
+
+// Middle column 
+.column.middle {
+}
+
+// Clear floats after the columns 
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+// Responsive layout - makes the three columns stack on top of each other instead of next to each other 
+@media screen and (max-width: 600px) {
+    .column.side, .column.middle {
+        width: 100%;
+    }
+}
 
 //Footer
 .footer {
