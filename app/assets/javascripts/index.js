@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function(event) {
+$(function() {
   var slideIndex = 0;
   carousel();
   
