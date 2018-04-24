@@ -13,10 +13,9 @@
 .barcodeLink {
   border-style: solid;
   float: right;
-  margin-right: 5em;
-  padding: 10px;
-  width: 105px;
+  width: 5%;
   height: 200px;
+  margin-right: 2%;
 }
 
 .barcodeLink h3 {
@@ -25,21 +24,26 @@
 }
 
 .contentSlide {
-  max-width: 80%;
   margin: auto;
   height: 200px;
   background-color: rgba(0, 0, 0, .05);
   border-style: solid;
   margin-bottom: 20px;
   float: left;
-  width: 70%;
-  margin-left: 10%;
-  padding: 10px;
+  width: 80%;
+  margin-left: 9%;
+  margin-right: 3%;
+  text-align: center;
+}
+
+.mySlides {
+  padding: 50px 0;
 }
 
 .img-circle {
   border-radius: 50%;
   vertical-align: middle;
+  margin-left: 10px;
 }
 
 .img-food {
@@ -47,7 +51,7 @@
   max-height:95px;
   width: auto;
   height: auto;
-}//:TODO
+}//TODO
 
 .logoImage {
   float: left;
@@ -102,12 +106,16 @@
 
 .navbar li {
   display: inline;
+  float: left;
+  height: 100%;
 }
 
 .navbar ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  float: left;
+  width: 100%;
 }
 
 .omniauth {
