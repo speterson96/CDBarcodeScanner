@@ -1,5 +1,7 @@
 <div class="moveBelowHeader">
-		<form action="/addItemToInventory" method="get">
+<div class="row">
+	<div class="column side">
+	<form action="/addItemToInventory" method="get">
 
            <label for="upc">Please enter the items UPC:</label>
            <input type="text" name="upc" id="upc" value="">
@@ -8,7 +10,7 @@
            <input type="submit" name="submit" value="Submit">
           
     </form>
-    <br><br>
+
     
     <% @inventory.each do |item| %>
       <div class="item">
@@ -18,5 +20,30 @@
           <p class="saveLabel">Description: </p><p class="difficulty"><%= item.description %></p>
     </div>
     <% end %> 
+</div>
 
+<div class="column middle">	
+		<form action="/addNewItemToInventory" method="get">
+
+           <label for="upc">Please select a category:</label>
+           <input type="text" name="upc" id="upc" value=""> </br>
+           <label for="descr">Item description:</label>
+           <input type="text" name="descr" id="descr" value=""> </br>         
+           <label for="qty">Quantity to add:</label>
+           <input type="text" name="qty" id="qty" value="">  </br>
+           <br>
+           <input type="submit" name="addItem" value="Add Item">
+          
+    </form>
+    
+    <br><br>
+        <% @inventory.each do |item| %>
+      <div class="item">
+          <p class="saveLabel">category: </p><p class="score"><%= item.category %></p>
+          <p class="saveLabel">description: </p><p class="_lives"><%= item.description %></p>
+          <p class="saveLabel">quantity: </p><p class="bullets"><%= item.quantity %></p>
+    </div>
+    <% end %> 
+    </div>
+</div>
 </div>
