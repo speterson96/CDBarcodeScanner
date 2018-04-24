@@ -9,13 +9,49 @@
           
     </form>
     <br><br>
-    <div class="inventoryItems"><br>
+  
+    <p>Search by: </p>
+    <select id="searchByField">
+        <option value=".upcValue">UPC</option>
+        <option value=".titleValue">Title</option>
+        <option value=".brandValue">Brand</option>
+        <option value=".descValue">Description</option>
+    </select><br>
+		<p style="text-align:center">Search:</p>
+	  <input type="text" id="search"></input> 
+    
+  <div class="inventoryItems"><br>	
+		<div id="list"> 
     <% @inventory.each do |item| %>
       <div class="itemWrapper">
-          <p class="label">UPC: </p><p class="score"><%= item.upc %></p><br>
-          <p class="label">Title: </p><p class="_lives"><%= item.title %></p><br>
-          <p class="label">Brand: </p><p class="bullets"><%= item.brand %></p><br>
-          <p class="label">Description: </p><p class="difficulty"><%= item.description %></p>
+          <p class="label">UPC: </p><p class="upcValue"><%= item.upc %></p><br>
+          <p class="label">Title: </p><p class="titleValue"><%= item.title %></p><br>
+          <p class="label">Brand: </p><p class="brandValue"><%= item.brand %></p><br>
+          <p class="label">Description: </p><p class="descValue"><%= item.description %></p>
       </div>
     <% end %> 
+    </div>
   </div>
+  
+ <script> 
+$(document).ready(function(){
+  
+ var selectedSearch = ".upcValue";
+  
+  $("#searchByField").change(function(){
+    selectedSearch = this.value;
+  })
+
+  $("#search").keyup(function(){    
+    var self = this;
+    $(".itemWrapper").each(function(){
+     if (!$(this).find(selectedSearch).text().toLowerCase().includes(self.value.toLowerCase())){
+       this.style.display = "none";
+     } else {
+        this.style.display = "block";
+     }
+    })    
+  })
+  
+}); 
+ </script>
