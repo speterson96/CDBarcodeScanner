@@ -2,21 +2,29 @@
 </div>
 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
-<div class="contentSlide">
-  <div class="mySlides">
-    <p>Did You Know?</p>
-    <p>We are here to try to keep you up to date with everything you need or want.</p>
-  </div>
+<div class="mainWrapper">
+  <div class="contentSlide">
+    <div class="mySlides">
+      <p>Did You Know?</p>
+      <p>We are here to try to keep you up to date with everything you need or want.</p>
+    </div>
+    
+    <p class="mySlides">
+      Your inventory could contain anything from the newly 
+      released movies to what you plan on making for dinner.
+    </p>
   
-  <p class="mySlides">
-    Your inventory could contain anything from the newly 
-    released movies to what you plan on making for dinner.
-  </p>
-
-  <p class="mySlides">
-    Everything can be added to your personal shopping list! 
-    <%= image_tag('food.jpg', width: '640', height: '480', class: 'img-food') %>
-  </p>
+    <p class="mySlides">
+      Everything can be added to your personal shopping list! 
+      <%= image_tag('food.jpg', width: '640', height: '480', class: 'img-food') %>
+    </p>
+  </div>
+  <div class="barcodeLink">
+    <h3>
+      Add an item to your inventory: 
+    </h3>
+    <%= link_to 'inventory' do %><%= image_tag('barcode.png', width: '100', height: '100', class: 'img-barcode') %><% end %>
+  </div>
 </div>
   
   <div class="content">
@@ -34,12 +42,7 @@
     </div>
   </div>
 
-<div class="barcodeLink">
-  <h3>
-    Add an item to your inventory: 
-  </h3>
-  <%= link_to 'inventory' do %><%= image_tag('barcode.png', width: '100', height: '100', class: 'img-barcode') %><% end %>
-</div>
+
 
 </body>
 </div>
