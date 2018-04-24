@@ -105,6 +105,11 @@
 
 .contentSlide {
   max-width: 80%;
+  margin: auto;
+  height: 200px;
+  background-color: rgba(0, 0, 0, .05);
+  border-style: solid;
+  margin-bottom: 20px;
 }
 
 body {
@@ -114,9 +119,10 @@ body {
   background-color: rgb(230,230,250);
 }
 
+// Get Organized slider
 .content {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   height: 160px;
@@ -283,6 +289,7 @@ th {
   width: 100%;
   float: left;
   margin-bottom: 10px;
+  font-size: 12px;
 }
 
 .contentCreators ul {
