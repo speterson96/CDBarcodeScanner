@@ -28,13 +28,24 @@
   vertical-align: middle;
 }
 
+.img-food {
+  max-width:230px;
+  max-height:95px;
+  width: auto;
+  height: auto;
+}//:TODO
+
 .logoImage {
   float: left;
   margin-left: 0em;
   
 }
 
-.moveBelowHeader {
+.mainInfo {// TODO: 
+  max-width: 80%;
+}
+
+.moveBelowHeader { 
   margin-top: 30px;
   margin-left: 20px;
 }
@@ -90,6 +101,10 @@
   margin: auto;
   margin-right: 1em;
   padding: 5px 5px 8px 5px;
+}
+
+.contentSlide {
+  max-width: 80%;
 }
 
 body {
@@ -236,6 +251,7 @@ h1 {
   font-family: 'Handlee', cursive;
   color: rgba(140, 49, 209, 1);
 }
+
 table {
     font-family: 'Handlee', cursive;
     border-collapse: collapse;
@@ -264,13 +280,18 @@ th {
 }
 
 .contentCreators {
-  
+  width: 100%;
+  float: left;
+  margin-bottom: 10px;
 }
 
-.footer ul {
+.contentCreators ul {
   list-style:none;
   float: left;
+  margin: auto;
+  width: 425px;
 }
+
 .footer p {
   clear: left;
 }
