@@ -10,6 +10,10 @@
     </form>
     <br><br>
   
+  <div class="filters">
+    <p>Search:</p>
+	  <input type="text" id="search"></input>
+	  
     <p>Search by: </p>
     <select id="searchByField">
         <option value=".upcValue">UPC</option>
@@ -17,9 +21,8 @@
         <option value=".brandValue">Brand</option>
         <option value=".descValue">Description</option>
     </select><br>
-		<p style="text-align:center">Search:</p>
-	  <input type="text" id="search"></input> 
-    
+	</div>
+	
   <div class="inventoryItems"><br>	
 		<div id="list"> 
     <% @inventory.each do |item| %>
@@ -46,9 +49,9 @@ $(document).ready(function(){
     var self = this;
     $(".itemWrapper").each(function(){
      if (!$(this).find(selectedSearch).text().toLowerCase().includes(self.value.toLowerCase())){
-       this.style.display = "none";
+      $(this).slideUp(150);
      } else {
-        this.style.display = "block";
+       $(this).slideDown(150);
      }
     })    
   })

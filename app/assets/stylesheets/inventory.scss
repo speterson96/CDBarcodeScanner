@@ -27,3 +27,13 @@
   border-bottom: 1px double violet;
   padding:10px;
 }
+
+.filter {
+  display:inline;
+}
+
+.filter p, .filter input, .filter select{
+  float:left;
+  display:inline;
+}
+
