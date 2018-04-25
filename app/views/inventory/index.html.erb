@@ -40,25 +40,22 @@
     </div>
   </div>
   
- <script> 
- 
-$(document).ready(function(){
-  
+ <script>  
+$(function() {
  var selectedSearch = ".upcValue";
-  
   $("#searchByField").change(function(){
     selectedSearch = this.value;
   })
-  $("#search").keyup(function(){    
+  $("#search").keyup(function(){
     var self = this;
     $(".itemWrapper").each(function(){
      if (!$(this).find(selectedSearch).text().toLowerCase().includes(self.value.toLowerCase())){
-      $(this).slideUp(150);
+       $(this).slideUp(150);
      } else {
        $(this).slideDown(150);
      }
     })    
   })
   
-}); 
+});  
  </script>

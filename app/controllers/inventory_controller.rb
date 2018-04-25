@@ -11,7 +11,6 @@ class InventoryController < ApplicationController
   end
   
   def addItem 
-    
     response = RestClient.post("https://api.upcitemdb.com/prod/trial/lookup",
       { 'upc' => params[:upc] }.to_json,
       {
@@ -41,7 +40,6 @@ class InventoryController < ApplicationController
           format.html {redirect_to "/inventory"}
       end 
     end 
-    
   end
   
 end
