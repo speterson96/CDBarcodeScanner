@@ -1,6 +1,10 @@
-<h1 class="moveBelowHeader">LoginSystem#userInfo</h1>
-<p>Find me in app/views/login_system/userInfo.html.erb</p>
-<div class="footer">
-&copy; Copyright 2018 Personal Inventory Systems
+<h1 class="moveBelowHeader">My Account Information</h1>
+  <form action="/userInfo" method="get">
+    
+      <div class="item">
+          <p class="saveLabel">Name: </p><p class="score"><%= current_user.name %></p>
+          <p class="saveLabel">My Account ID: </p><p class="bullets"><%= current_user.uid %></p>
+      </div>
+    
 </div>
 
