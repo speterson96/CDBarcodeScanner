@@ -11,7 +11,6 @@ class InventoryController < ApplicationController
   end
   
   def addItem 
-    
     response = RestClient.post("https://api.upcitemdb.com/prod/trial/lookup",
       { 'upc' => params[:upc] }.to_json,
       {
@@ -33,7 +32,7 @@ class InventoryController < ApplicationController
       title: json['title'],
       brand: json['brand'],
       description: json['description'],
-      user_id: current_user.uid
+      user_id: session['user_id']
     )
     
     if @inventory.save
@@ -41,7 +40,6 @@ class InventoryController < ApplicationController
           format.html {redirect_to "/inventory"}
       end 
     end 
-    
   end
   
 end
