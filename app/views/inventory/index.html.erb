@@ -25,7 +25,7 @@
 	
   <div class="inventoryItems"><br>	
 		<div id="list"> 
-    <% @inventory.each do |item| %>
+    <% @inventory.where("user_id = ?", session[:user_id]).each do |item| %>
       <div class="itemWrapper">
           <p class="label">UPC: </p><p class="upcValue"><%= item.upc %></p><br>
           <p class="label">Title: </p><p class="titleValue"><%= item.title %></p><br>
