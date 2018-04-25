@@ -1,5 +1,6 @@
 class InventoryController < ApplicationController
   before_action :index 
+  
   require 'rest-client'
 
   def index
@@ -31,8 +32,10 @@ class InventoryController < ApplicationController
       upc: params[:upc], 
       title: json['title'],
       brand: json['brand'],
-      description: json['description']
+      description: json['description'],
+      user_id: session['user_id']
     )
+    
     if @inventory.save
       respond_to do |format|
           format.html {redirect_to "/inventory"}
