@@ -1,4 +1,4 @@
-<div class="moveBelowHeader">
+
 		<form action="/addItemToInventory" method="get">
 
            <label for="upc">Please enter the items UPC:</label>
@@ -9,14 +9,53 @@
           
     </form>
     <br><br>
-    
-    <% @inventory.each do |item| %>
-      <div class="item">
-          <p class="saveLabel">upc: </p><p class="score"><%= item.upc %></p>
-          <p class="saveLabel">Title: </p><p class="_lives"><%= item.title %></p>
-          <p class="saveLabel">Brand: </p><p class="bullets"><%= item.brand %></p>
-          <p class="saveLabel">Description: </p><p class="difficulty"><%= item.description %></p>
-    </div>
+<<<<<<< HEAD
+  
+  <div class="filters">
+    <p>Search:</p>
+	  <input type="text" id="search"></input>
+	  
+    <p>Search by: </p>
+    <select id="searchByField">
+        <option value=".upcValue">UPC</option>
+        <option value=".titleValue">Title</option>
+        <option value=".brandValue">Brand</option>
+        <option value=".descValue">Description</option>
+    </select><br>
+	</div>
+	
+  <div class="inventoryItems"><br>	
+		<div id="list"> 
+    <% @inventory.where("user_id = ?", session[:user_id]).each do |item| %>
+      <div class="itemWrapper">
+          <p class="label">UPC: </p><p class="upcValue"><%= item.upc %></p><br>
+          <p class="label">Title: </p><p class="titleValue"><%= item.title %></p><br>
+          <p class="label">Brand: </p><p class="brandValue"><%= item.brand %></p><br>
+          <p class="label">Description: </p><p class="descValue"><%= item.description %></p>
+      </div>
     <% end %> 
+    </div>
+  </div>
+  
+ <script> 
+$(document).ready(function(){
+  
+ var selectedSearch = ".upcValue";
+  
+  $("#searchByField").change(function(){
+    selectedSearch = this.value;
+  })
 
-</div>
+  $("#search").keyup(function(){    
+    var self = this;
+    $(".itemWrapper").each(function(){
+     if (!$(this).find(selectedSearch).text().toLowerCase().includes(self.value.toLowerCase())){
+      $(this).slideUp(150);
+     } else {
+       $(this).slideDown(150);
+     }
+    })    
+  })
+  
+}); 
+ </script>
