@@ -10,12 +10,13 @@
     </form>
     <br><br>
     
-    <% @inventory.each do |item| %>
+    <% @inventory.where(user_id: current_user.uid).each do |item| %>
       <div class="item">
           <p class="saveLabel">upc: </p><p class="score"><%= item.upc %></p>
           <p class="saveLabel">Title: </p><p class="_lives"><%= item.title %></p>
           <p class="saveLabel">Brand: </p><p class="bullets"><%= item.brand %></p>
           <p class="saveLabel">Description: </p><p class="difficulty"><%= item.description %></p>
+          <p>UserID</p><p><%= item.user_id %></p>
     </div>
     <% end %> 
 

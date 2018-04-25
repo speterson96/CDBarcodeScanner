@@ -31,7 +31,8 @@ class InventoryController < ApplicationController
       upc: params[:upc], 
       title: json['title'],
       brand: json['brand'],
-      description: json['description']
+      description: json['description'],
+      user_id: current_user.uid
     )
     if @inventory.save
       respond_to do |format|
