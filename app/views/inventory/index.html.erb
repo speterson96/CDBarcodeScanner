@@ -1,5 +1,4 @@
-
-		<form action="/addItemToInventory" method="get">
+	<form action="/addItemToInventory" method="get">
 
            <label for="upc">Please enter the items UPC:</label>
            <input type="text" name="upc" id="upc" value="">
@@ -37,6 +36,7 @@
   </div>
   
  <script> 
+ 
 $(document).ready(function(){
   
  var selectedSearch = ".upcValue";
@@ -44,7 +44,6 @@ $(document).ready(function(){
   $("#searchByField").change(function(){
     selectedSearch = this.value;
   })
-
   $("#search").keyup(function(){    
     var self = this;
     $(".itemWrapper").each(function(){
