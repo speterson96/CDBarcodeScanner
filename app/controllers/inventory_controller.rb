@@ -33,7 +33,7 @@ class InventoryController < ApplicationController
       title: json['title'],
       brand: json['brand'],
       description: json['description'],
-      user_id: session[:user_id]
+      user_id: current_user.uid
     )
     
     if @inventory.save
