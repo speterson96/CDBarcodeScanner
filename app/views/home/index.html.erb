@@ -9,15 +9,15 @@
       <p>We are here to try to keep you up to date with everything you need or want.</p>
     </div>
     
-    <p class="mySlides">
+    <div class="mySlides">
       Your inventory could contain anything from the newly 
       released movies to what you plan on making for dinner.
-    </p>
+    </div>
   
-    <p class="mySlides">
+    <div class="mySlides">
       Everything can be added to your personal shopping list! 
       <%= image_tag('food.jpg', width: '640', height: '480', class: 'img-food') %>
-    </p>
+    </div>
   </div>
   <div class="barcodeLink">
     <h3>
@@ -42,8 +42,23 @@
     </div>
   </div>
 
+<script>
 
+$(function() {
+  
+  $(".contentSlide > div:gt(0)").hide();
+  
+  setInterval(function() { 
+    $('.contentSlide > div:first')
+      .fadeOut(1000)
+      .next()
+      .fadeIn(1000)
+      .end()
+      .appendTo('.contentSlide');
+  },  3000);
 
+});
+</script>
 </body>
 </div>
 

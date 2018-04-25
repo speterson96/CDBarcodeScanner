@@ -24,6 +24,7 @@
 }
 
 .contentSlide {
+  position:relative;
   margin: auto;
   height: 200px;
   background-color: rgba(0, 0, 0, .05);
@@ -34,6 +35,13 @@
   margin-left: 9%;
   margin-right: 3%;
   text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4); 
+}
+
+.contentSlide div {
+  position: absolute;
+  height: 150px;
+  left: 34%;
 }
 
 .mySlides {
