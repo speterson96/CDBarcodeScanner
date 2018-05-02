@@ -10,37 +10,12 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-.barcodeLink {
-  background-color: rgba(140, 49, 209, 1);
-  color: rgba(255, 255, 255, .8);
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  border-style: solid;
-  width: 10%;
-}
-
-.barcodeLink h3 {
-  text-align: center;
-  margin-bottom: 5px;
-}
-
-.barcodeLink a {
-   margin-left: 1%;
-}
-
-.barcodeLink img {
-  width: 90%;
-  height: 90%;
-}
-
 .mainWrapper {
   width: 100%;
   margin: 0 auto;
   padding-top: 10px;
   float: left;
 }
-
 
 .img-circle {
   border-radius: 50%;
@@ -288,7 +263,6 @@ body {
 }
 
 //Reports Table
-
 h1 {
   font-family: 'Handlee', cursive;
   color: rgba(140, 49, 209, 1);
@@ -356,6 +330,19 @@ th {
 
 .carousel-inner {
   max-height: 454px;
+}
+
+.item img {
+  max-height: 560px;
+}
+
+.item a {
+  text-decoration: none;
+  color: rgba(255, 126, 247, 1);
+}
+
+.item a:hover {
+  color: rgba(255, 126, 237, 0.81);
 }
 
 .container {
