@@ -11,11 +11,13 @@
 }
 
 .barcodeLink {
+  background-color: rgba(140, 49, 209, 1);
+  color: rgba(255, 255, 255, .8);
+  position: absolute;
+  bottom: 0;
+  right: 0;
   border-style: solid;
-  float: right;
-  width: 5%;
-  height: 200px;
-  margin-right: 2%;
+  width: 10%;
 }
 
 .barcodeLink h3 {
@@ -23,22 +25,22 @@
   margin-bottom: 5px;
 }
 
-.contentSlide {
-  margin: auto;
-  height: 200px;
-  background-color: rgba(0, 0, 0, .05);
-  border-style: solid;
-  margin-bottom: 20px;
-  float: left;
-  width: 80%;
-  margin-left: 9%;
-  margin-right: 3%;
-  text-align: center;
+.barcodeLink a {
+   margin-left: 1%;
 }
 
-.mySlides {
-  padding: 50px 0;
+.barcodeLink img {
+  width: 90%;
+  height: 90%;
 }
+
+.mainWrapper {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 10px;
+  float: left;
+}
+
 
 .img-circle {
   border-radius: 50%;
@@ -51,30 +53,31 @@
   max-height:95px;
   width: auto;
   height: auto;
-}//TODO
+}
 
 .logoImage {
   float: left;
   margin-left: 0em;
-  
 }
 
-.mainInfo {// TODO: 
+.mainInfo {
   max-width: 80%;
 }
 
-.mainWrapper {
-  width: 100%;
-  margin: 0 auto;
-    padding-top: 10px;
-}
-
 .moveBelowHeader { 
-  margin-top: 30px;
-  margin-left: 20px;
+  margin-top: 80px;
 }
 
+@media screen and (max-width: 1200px) {
+  .omniauthSignout {
+    display: none;
+  }
+  .navbar-right {
+    float: none;
+  }
+}
 .navbar {
+  z-index: 10000;
   background-color: rgba(140, 49, 209, 1);
   font-family: 'Handlee', cursive;
   left: 0;
@@ -96,7 +99,7 @@
   text-decoration: none;
   margin: auto;
   padding: 8px 5px 8px 5px;
-  height: 44px;
+  height: 60px;
 }
 
 .navbar a:hover {
@@ -145,24 +148,24 @@
 body {
   width: 100%;
   height: 100%;
-  position: fixed;
-/* background-color: rgb(230,230,250);*/
-  background: url("blur-blurred-bokeh-938967.jpg")
+  background: url("blur-blurred-bokeh-938967.jpg");
+  margin: 0 0 100px 10px;
 }
 
 // Get Organized slider
 .content {
-  position: absolute;
-  top: 57%;
+  float: left;
+  position: relative;
+  margin-top: 100px;
   left: 50%;
   transform: translate(-50%, -50%);
   height: 160px;
   overflow:hidden;
-  
   font-family: 'Lato', sans-serif;
   font-size: 35px;
   line-height: 40px;
   color: #ecf0f1;
+  max-width: 740px;
   
 &__container {
   font-weight: 600;
@@ -307,8 +310,8 @@ th {
     color: lavender;
  }
  
-//Inventory Page
-// Create three unequal columns that floats next to each other 
+// ***** Add Inventory Page  ****
+// Three unequal columns that floats next to each other 
 .column {
     float: left;
     padding: 10px;
@@ -329,6 +332,7 @@ th {
     display: table;
     clear: both;
 }
+
 // Responsive layout - makes the three columns stack on top of each other instead of next to each other 
 @media screen and (max-width: 600px) {
     .column.side, .column.middle {
@@ -336,29 +340,92 @@ th {
     }
 }
 
+//Carousel CSS
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
+#myCarousel {
+}
+
+.carousel-caption {
+  color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(140, 49, 209, 0.7);
+  bottom: 24%;
+  padding-top: 0;
+}
+
+.carousel-inner {
+  max-height: 454px;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+}
+
+.container img {
+    width: 100%;
+    height: auto;
+}
+
+.container .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #f1f1f1;
+    color: black;
+    font-size: 16px;
+    padding: 16px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.container .btn:hover {
+    background-color: lavender;
+    color: pink;
+}
+
+
 //Footer
+html {
+    position: relative;
+    min-height: 100%;
+}
 .footer {
+  background-color: rgba(140, 49, 209, 1);
+  bottom: 52px;
+  color: rgba(255, 255, 255, .6);
   font-family: 'Handlee', cursive;
-  position: fixed;
-  bottom: 1em;
-  color: rgba(140, 49, 209, 1);
+  font-weight: bolder;
+  left: 0;
+  margin-bottom: -50px;
+  max-height: 120px;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
   text-align: center;
   width: 100%;
-  font-weight: bolder;
 }
 
 .contentCreators {
-  width: 100%;
   float: left;
-  margin-bottom: 10px;
-  font-size: 12px;
+  font-size: 1em;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  max-height: 64px;
+  padding: 0 10%;
+  width: 100%;
 }
 
 .contentCreators ul {
-  list-style:none;
   float: left;
-  margin: auto;
-  width: 425px;
+  list-style:none;
+  margin: 0 auto;
+  width: 20%;
+  padding: 0;
 }
 
 .footer p {

@@ -1,18 +1,14 @@
 <div class="moveBelowHeader">
 </div>
-<div class="row">
-	<div class="column side">
 	<form action="/addItemToInventory" method="get">
 
            <label for="upc">Please enter the items UPC:</label>
            <input type="text" name="upc" id="upc" value="">
            <br><br>
-
            <input type="submit" name="submit" value="Submit">
           
-    </form>
-    <br><br>
-  
+  </form>
+
   <div class="filters">
     <p>Search:</p>
 	  <input type="text" id="search"></input>
@@ -23,9 +19,9 @@
         <option value=".titleValue">Title</option>
         <option value=".brandValue">Brand</option>
         <option value=".descValue">Description</option>
-    </select><br>
+    </select><br><br>
 	</div>
-	
+
   <div class="inventoryItems"><br>	
 		<div id="list"> 
     <% @inventory.where("user_id = ?", session[:user_id]).each do |item| %>
@@ -38,9 +34,8 @@
     <% end %> 
     </div>
   </div>
-  
  <script>  
-$(function() {
+$(document).ready(function(){
  var selectedSearch = ".upcValue";
   $("#searchByField").change(function(){
     selectedSearch = this.value;
@@ -56,5 +51,5 @@ $(function() {
     })    
   })
   
-});  
+}); 
  </script>
