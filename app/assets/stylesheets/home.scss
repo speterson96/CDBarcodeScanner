@@ -26,28 +26,12 @@
 }
 
 .barcodeLink a {
-   margin-left: 5%;
+   margin-left: 1%;
 }
 
 .barcodeLink img {
   width: 90%;
   height: 90%;
-}
-
-//Carousel CSS
-@import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
-.carousel-caption {
-  color: rgba(255, 255, 255, 0.9);
-  background-color: rgba(140, 49, 209, 0.7);
-  border-radius: 50%;
-}
-
-.carousel-inner {
-  max-height: 454px;
-}
-
-.container {
-  width: 30% !important;
 }
 
 .mainWrapper {
@@ -69,14 +53,14 @@
   max-height:95px;
   width: auto;
   height: auto;
-}//TODO
+}
 
 .logoImage {
   float: left;
   margin-left: 0em;
 }
 
-.mainInfo {// TODO: 
+.mainInfo {
   max-width: 80%;
 }
 
@@ -348,6 +332,7 @@ th {
     display: table;
     clear: both;
 }
+
 // Responsive layout - makes the three columns stack on top of each other instead of next to each other 
 @media screen and (max-width: 600px) {
     .column.side, .column.middle {
@@ -355,10 +340,26 @@ th {
     }
 }
 
+//Carousel CSS
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
+#myCarousel {
+}
+
+.carousel-caption {
+  color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(140, 49, 209, 0.7);
+  bottom: 24%;
+  padding-top: 0;
+}
+
+.carousel-inner {
+  max-height: 454px;
+}
+
 .container {
     position: relative;
     width: 100%;
-    max-width: 400px;
+    max-width: 800px;
 }
 
 .container img {
