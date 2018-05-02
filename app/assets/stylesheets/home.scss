@@ -428,8 +428,21 @@ html {
   float: left;
   list-style:none;
   margin: 0 auto;
-  width: 2%;
+  width: 25%;
   padding: 0;
+}
+
+.contentCreators a {
+  text-decoration: none;
+  color: rgba(208, 126, 247, 1);
+}
+
+.contentCreators a:hover {
+  color: rgba(205, 168, 237, 0.81);
+}
+
+.contentCreators h4 {
+  margin: 0;
 }
 
 .footer p {
