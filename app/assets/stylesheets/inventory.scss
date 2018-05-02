@@ -1,4 +1,6 @@
 
+
+
 .label {
   color:violet;
   font-family: 'Handlee';
@@ -11,9 +13,11 @@
   margin:0;
   margin-right: 20px;
   margin-left:20px;
-  background-color:rgba(255,255,255, 0.1);
-  box-shadow: 0px 0px 50px rgba(255,255,255, 0.4), 0px 0px 50px rgba(255,255,255, 0.4) inset;
-  border-radius: 3%;
+  //background-color:rgba(255,255,255, 0.1);
+  box-shadow: 0px 0px 15px rgba(255,255,255, 0.1), 0px 0px 100px rgba(255,255,255, 0.1) inset;
+  border-radius: 5px;
+  max-height:28em;
+  overflow:auto;
 }
 
 .inventoryItems p {
@@ -28,12 +32,13 @@
   padding:10px;
 }
 
-.filter {
+.filters {
+  float:right;
+  margin-right:10%;
   display:inline;
 }
 
-.filter p, .filter input, .filter select{
-  float:left;
+.filters p, .filters input, .filters select{
   display:inline;
 }
 
