@@ -16,9 +16,8 @@
   <ul class="navul">
   
     <li><%=link_to 'Home', root_url %></li>
-    
-    <li><%=link_to 'Add Item', root_url %></li>
-    
+    <li><%=link_to 'Add Item', "/addItem" %></li>
+   <a href="app/views/inventory/addItem.html">Add Item</a>
     <li><%=link_to 'Reports', "/reports" %></li>
     <% if current_user %>
       <li><%=link_to 'My Account', userInfo_url %></li>
