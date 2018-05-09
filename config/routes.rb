@@ -11,8 +11,8 @@ Rails.application.routes.draw do
   get '/signup', to: 'login_system#signup', as: 'signup'
   get '/userInfo', to: 'login_system#userInfo', as: 'userInfo'
   get '/reports', to: 'inventory#reports', as: 'reports'
-  
-  get '/addItemToInventory', to: 'inventory#addItemManually', as: 'addItemToInventory'
+  get '/addItemToInventory', to: 'inventory#addItem', as: 'addItemToInventory'
+  get '/addItemToInventoryManually', to: 'inventory#addItemManually', as: 'addItemToInventoryManually'
   #Google Auth 
   get 'auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/')
