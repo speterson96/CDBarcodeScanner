@@ -12,38 +12,42 @@
   <form action="/action_page.php">
     <div class="row">
       <div class="col-25">
+        <label for="name">Name:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="name" name="name" placeholder="Name...">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="text">Brand:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="brand" name="brand" placeholder="Brand...">
+      </div>
+    </div>
+    
+
+    <div class="row">
+      <div class="col-25">
         <label for="description">Description:</label>
       </div>
       <div class="col-75">
-        <input type="text" id="description" name="description" placeholder="Description...">
+        <textarea id="description" name="description" placeholder="Write something..." style="height:200px"></textarea>
       </div>
     </div>
-    <div class="row">
+    
+        <div class="row">
       <div class="col-25">
-        <label for="text">:</label>
+        <label for="description">Upload Image:</label>
       </div>
-      <div class="col-75">
-        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-      </div>
-    </div>
-    <div class="row">
+     <div class="row">
       <div class="col-25">
-        <label for="class">Class:</label>
+        </br>
+        <form action="/action_page.php">
+      <input type="file" name="pic" accept="image/*">
+</form>
       </div>
-      <div class="col-75">
-        <select id="class" name="class">
-          <option value="upc">UPC</option>
-          <option value="title">Title</option>
-          <option value="brand">Brand</option>
-        </select>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="notes">Notes:</label>
-      </div>
-      <div class="col-75">
-        <textarea id="notes" name="notes" placeholder="Write something..." style="height:200px"></textarea>
       </div>
     </div>
     <div class="row">

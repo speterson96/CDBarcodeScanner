@@ -1,4 +1,4 @@
-gotRails.application.routes.draw do
+Rails.application.routes.draw do
 
   get 'sessions/create'
 
