@@ -44,14 +44,24 @@
   padding-left: 10px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1300px) {
+  .container {
+    width: 50% !important;
+  }
+  
+  .carousel-caption {
+    top: 65%;
+  }
+  
   .omniauthSignout {
     display: none;
   }
+  
   .navbar-right {
     float: none;
   }
 }
+
 .navbar {
   z-index: 10000;
   background-color: rgba(140, 49, 209, 1);
@@ -324,8 +334,10 @@ th {
 .carousel-caption {
   color: rgba(255, 255, 255, 0.9);
   background-color: rgba(140, 49, 209, 0.7);
-  bottom: 24%;
+  padding-bottom: 24%;
   padding-top: 0;
+  top: 52%;
+  height: 100%;
 }
 
 .carousel-inner {
@@ -334,6 +346,8 @@ th {
 
 .item img {
   max-height: 560px;
+  height: 100%;
+  width: 100%;
 }
 
 .item a {
