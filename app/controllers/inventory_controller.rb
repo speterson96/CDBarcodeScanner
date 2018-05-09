@@ -1,4 +1,5 @@
 class InventoryController < ApplicationController
+  before_filter :authenticate_user!
   before_action :index 
   
   require 'rest-client'
