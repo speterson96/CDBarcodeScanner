@@ -1,31 +1,43 @@
-
-
-
 .label {
   color:violet;
   font-family: 'Handlee';
-  display:inline;
 }
 
 .inventoryItems {
-  width: 95%; 
+  width: 50%; 
   height:100%;
+  min-height:30em;
+  float:right;
   margin:0;
-  margin-right: 20px;
+  margin-right: 3%;
   margin-left:20px;
   //background-color:rgba(255,255,255, 0.1);
   box-shadow: 0px 0px 15px rgba(255,255,255, 0.1), 0px 0px 100px rgba(255,255,255, 0.1) inset;
   border-radius: 5px;
+  border:1px dotted violet;
   max-height:28em;
   overflow:auto;
 }
 
-.inventoryItems p {
-  display:inline;
+.inventoryControls{
+  position:absolute;
+  float: left;
+  width: 40%;
+  height:30em;
+  background-color:rgba(0, 0, 0, 0);
+  margin-left:3%;
+  border: .5em solid rgba(255, 255, 255, 0.84);
+  padding:1em;
+  transition: .3s linear;
+}
+
+.inventoryControls:hover {
+  border: .8em solid rgba(255, 255, 255, 0.84);
+  box-shadow: 0px 0px 15px rgba(0,0,0, 0.4)
 }
 
 .itemWrapper {
-  width:90%; 
+  width:40%; 
   height: auto;
   margin: 0 auto;
   border-bottom: 1px double violet;
@@ -33,12 +45,11 @@
 }
 
 .filters {
-  float:right;
-  margin-right:10%;
-  display:inline;
+ margin:auto;
+ width:90%;
+ height:100%;
 }
 
-.filters p, .filters input, .filters select{
-  display:inline;
-}
+
+
 

@@ -1,26 +1,26 @@
 <div class="moveBelowHeader">
 </div>
-	<form action="/addItemToInventory" method="get">
 
-           <label for="upc">Please enter the items UPC:</label>
-           <input type="text" name="upc" id="upc" value="">
-           <br><br>
-           <input type="submit" name="submit" value="Submit">
-          
-  </form>
-
+<div class="inventoryControls">
   <div class="filters">
-    <p>Search:</p>
-	  <input type="text" id="search"></input>
+    <label>Search:</label>
+	  <input type="text" id="search">
 	  
-    <p>Search by: </p>
+    <label>Search by: </label>
     <select id="searchByField">
         <option value=".upcValue">UPC</option>
         <option value=".titleValue">Title</option>
         <option value=".brandValue">Brand</option>
         <option value=".descValue">Description</option>
-    </select><br><br>
+    </select>
+    
+    <form action="/addItemToInventory" method="get">
+           <label for="upc">Please enter the items UPC:</label>
+           <input type="text" name="upc" id="upc" value="">
+           <input type="submit" name="submit" value="Submit">
+    </form>
 	</div>
+</div>
 
   <div class="inventoryItems"><br>	
 		<div id="list"> 
