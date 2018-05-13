@@ -1,55 +1,123 @@
-.label {
-  color:violet;
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-weight: normal;
+	font-style: normal;
+	text-decoration: none;
+	outline-style: none;
+	box-sizing: border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+}
+
+input, select {
+  display:inline
+}
+
+h2 {
+  text-align:center;
+  margin: 0 auto;
+  color: #c3073f;
   font-family: 'Handlee';
+  font-size:3.3em;
+}
+
+.label {
+  color: #6f2232;
+  font-family: 'Handlee';
+  display: inline;
+  font-size: 1.2em;
+  margin: 2px;
+}
+
+.previewLabel{
+  color: #6f2232;
+  font-size: 1.2em;
+  text-align:left;
 }
 
 .inventoryItems {
-  width: 50%; 
-  height:100%;
-  min-height:30em;
-  float:right;
-  margin:0;
-  margin-right: 3%;
-  margin-left:20px;
-  //background-color:rgba(255,255,255, 0.1);
-  box-shadow: 0px 0px 15px rgba(255,255,255, 0.1), 0px 0px 100px rgba(255,255,255, 0.1) inset;
-  border-radius: 5px;
-  border:1px dotted violet;
-  max-height:28em;
+  width: 65%;
+  margin:1em;
+  min-height:44em;
+  max-height:44em;
   overflow:auto;
+  border: 1px solid white;
+  float:left
 }
 
-.inventoryControls{
-  position:absolute;
-  float: left;
-  width: 40%;
-  height:30em;
-  background-color:rgba(0, 0, 0, 0);
-  margin-left:3%;
-  border: .5em solid rgba(255, 255, 255, 0.84);
+.itemPreview {
+  width: 32%;
+  margin:1em;
+  min-height:44em;
+  overflow:auto;
+  border: 1px solid white;
+}
+
+.itemPreview p {
+  text-align: center; 
+  color:violet;
+  text-shadow: 0px 0px #202020;
+  font-size:1.3em;
+  font-family: 'Handlee';
+}
+
+.itemPreview img {
+  margin: 0 auto;
+  margin-left:25%;
+  margin-top:1em;
+  max-height: 25em;
+  max-width: 20em;
+  width:auto;
+  height:auto;
+  border:1px solid white;
+}
+
+.displayInv {
+  width: 95%;
+  margin:auto;
+  margin-bottom: 5em;
+  min-height:45em;
+  overflow:auto;
+  border: 1px solid white;
+  background-color: #ac3b61;
+}
+
+.filters{
+  margin-left: 3em;
   padding:1em;
-  transition: .3s linear;
 }
 
-.inventoryControls:hover {
-  border: .8em solid rgba(255, 255, 255, 0.84);
-  box-shadow: 0px 0px 15px rgba(0,0,0, 0.4)
+.filters input {
+  margin-bottom: 1em;
+}
+
+.submit {
+  border-radius: 3px;
+  background-color: #FFF;
+  padding: 2px;
+  margin-bottom: 1em;
+}
+
+.submit:hover {
+  border: 1px solid #501b1d;
+  margin:-1px;
+  margin-bottom: 1em;
 }
 
 .itemWrapper {
-  width:40%; 
+  width:90%; 
   height: auto;
-  margin: 0 auto;
-  border-bottom: 1px double violet;
+  margin: 3px auto;
+  border: 3px double violet;
   padding:10px;
 }
 
-.filters {
- margin:auto;
- width:90%;
- height:100%;
+.itemWrapper:hover{
+  cursor:pointer;
 }
 
-
-
-
+.itemWrapper p {
+  display:inline;
+}

@@ -1,28 +1,27 @@
 <div class="moveBelowHeader">
 </div>
 
-<div class="inventoryControls">
+<h2>Your Inventory</h2>
   <div class="filters">
-    <label>Search:</label>
+    <label class="label">Search:</label>
 	  <input type="text" id="search">
-	  
-    <label>Search by: </label>
+	  <label class="label">By:</label>
     <select id="searchByField">
         <option value=".upcValue">UPC</option>
         <option value=".titleValue">Title</option>
         <option value=".brandValue">Brand</option>
         <option value=".descValue">Description</option>
     </select>
-    
+   
     <form action="/addItemToInventory" method="get">
-           <label for="upc">Please enter the items UPC:</label>
+           <label for="upc" class="label">Please enter the items UPC:</label>
            <input type="text" name="upc" id="upc" value="">
-           <input type="submit" name="submit" value="Submit">
+           <input type="submit" name="submit" value="Submit" class="submit">
     </form>
 	</div>
-</div>
 
-  <div class="inventoryItems"><br>	
+<div class ="displayInv">
+  <div class="inventoryItems">	
 		<div id="list"> 
     <% @inventory.where("user_id = ?", session[:user_id]).each do |item| %>
       <div class="itemWrapper">
@@ -34,12 +33,26 @@
     <% end %> 
     </div>
   </div>
+  
+  <div class="itemPreview">
+    <img src="/assets/barcode.png" alt="Your item Image">
+    <p class="previewLabel Pupc"></p>
+    <p class="previewLabel Ptitle"></p>
+    <p class="previewLabel Pbrand"></p>
+    <p class="previewLabel Pdesc"></p>
+    <p class="Pdefault">Select an item to view more information</p>
+  </div>
+</div>
+  
+</div>
  <script>  
-$(document).ready(function(){
+$(document).ready(function(){  
  var selectedSearch = ".upcValue";
+ 
   $("#searchByField").change(function(){
     selectedSearch = this.value;
   })
+  
   $("#search").keyup(function(){
     var self = this;
     $(".itemWrapper").each(function(){
@@ -50,6 +63,17 @@ $(document).ready(function(){
      }
     })    
   })
+  
+  $(".itemWrapper").click(function(){
+     $(".itemWrapper").css("border", "3px double violet");
+     $(this).css("border", "3px double white");
+     $(".Pupc").text($(this).children(".upcValue").text());   
+     $(".Ptitle").text($(this).children(".titleValue").text());
+     $(".Pbrand").text($(this).children(".brandValue").text());
+     $(".Pdesc").text($(this).children(".descValue").text());
+     $(".Pdefault").text("");
+  })
+  
   
 }); 
  </script>
