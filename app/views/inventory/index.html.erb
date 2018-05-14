@@ -14,7 +14,7 @@
     </select>
    
     <form action="/addItemToInventory" method="get">
-           <label for="upc" class="label">Please enter the items UPC:</label>
+           <label for="upc" class="label">Add item by  UPC:</label>
            <input type="text" name="upc" id="upc" value="">
            <input type="submit" name="submit" value="Submit" class="submit">
     </form>
@@ -29,13 +29,14 @@
           <p class="label">Title: </p><p class="titleValue"><%= item.title %></p><br>
           <p class="label">Brand: </p><p class="brandValue"><%= item.brand %></p><br>
           <p class="label">Description: </p><p class="descValue"><%= item.description %></p>
+          <p class="hiddenImage" style="display:none"><%= item.image %></p>
       </div>
     <% end %> 
     </div>
   </div>
   
   <div class="itemPreview">
-    <img src="/assets/barcode.png" alt="Your item Image">
+    <img src="assets/barcode.png" alt="Your item Image">
     <p class="previewLabel Pupc"></p>
     <p class="previewLabel Ptitle"></p>
     <p class="previewLabel Pbrand"></p>
@@ -71,9 +72,9 @@ $(document).ready(function(){
      $(".Ptitle").text($(this).children(".titleValue").text());
      $(".Pbrand").text($(this).children(".brandValue").text());
      $(".Pdesc").text($(this).children(".descValue").text());
+     $(".itemPreview img").attr("src", $(this).children(".hiddenImage").text());
      $(".Pdefault").text("");
   })
-  
-  
+    
 }); 
  </script>

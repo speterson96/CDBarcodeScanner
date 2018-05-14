@@ -11,7 +11,6 @@ class InventoryController < ApplicationController
   end
   
   def addItem 
-  
     upc = params[:upc].tr('^0-9', '')
     response = RestClient.post("https://api.upcitemdb.com/prod/trial/lookup",
       { 'upc' => upc }.to_json,
@@ -28,6 +27,7 @@ class InventoryController < ApplicationController
       title: json['title'],
       brand: json['brand'],
       description: json['description'].gsub(/<\/?[^>]*>/, " "),
+      image: json['images'].first,
       user_id: session['user_id']
     )
     
@@ -35,8 +35,7 @@ class InventoryController < ApplicationController
       respond_to do |format|
           format.html {redirect_to "/inventory"}
       end 
-    end 
-    
+    end    
   end
   
 end
