@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
   get 'sessions/create'
-
   get 'sessions/destroy'
-
   root to: 'home#index'
+  
+  delete 'inventory/:user_id/:upc/:id' => 'inventory#destroy', as: 'deleteItem'
   
   get '/inventory', to: 'inventory#index', as: 'inventory'
   get '/login', to: redirect('/auth/google_oauth2'), as: 'login'
@@ -20,6 +20,7 @@ Rails.application.routes.draw do
 
   resources :sessions, only: [:create, :destroy]
   resource :home, only: [:index]
+  resources :inventory, only: [:destroy]
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
