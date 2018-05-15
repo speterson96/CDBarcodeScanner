@@ -5,6 +5,7 @@ class CreateInventories < ActiveRecord::Migration
       t.string :title
       t.string :brand
       t.string :description
+      t.string :image
       t.integer :user_id
     end
    #execute "ALTER TABLE inventories ADD PRIMARY KEY (upc);"
