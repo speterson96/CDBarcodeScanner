@@ -1,0 +1,62 @@
+<div class="moveBelowHeader">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="add_item_manually.scss">
+
+</head>
+
+</head>
+<body>
+
+<div class="container">
+  <form action="/addItemToInventoryManually">
+    <div class="row">
+      <div class="col-25">
+        <label for="name">Name:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="name" name="name" placeholder="Name...">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="text">Brand:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="brand" name="brand" placeholder="Brand...">
+      </div>
+    </div>
+    
+
+    <div class="row">
+      <div class="col-25">
+        <label for="description">Description:</label>
+      </div>
+      <div class="col-75">
+        <textarea id="description" name="description" placeholder="Write something..." style="height:200px"></textarea>
+      </div>
+    </div>
+    
+        <div class="row">
+      <div class="col-25">
+        <label for="description">Upload Image:</label>
+      </div>
+     <div class="row">
+      <div class="col-25">
+        </br>
+      <input type="file" name="pic" accept="image/*">
+      </div>
+      </div>
+    </div>
+
+     <div class="button">
+     <br>
+        <input type="submit" value="Add Item!">
+        </div>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
+
