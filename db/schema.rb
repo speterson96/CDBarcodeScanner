@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20180424095526) do
     t.string "title"
     t.string "brand"
     t.string "description"
+    t.string "image"
     t.string "user_id"
   end
 

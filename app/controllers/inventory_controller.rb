@@ -43,6 +43,7 @@ class InventoryController < ApplicationController
       title: json['title'],
       brand: json['brand'],
       description: json['description'].gsub(/<\/?[^>]*>/, " "),
+      image: json['images'].first,
       user_id: session['user_id']
     )
     
@@ -50,8 +51,7 @@ class InventoryController < ApplicationController
       respond_to do |format|
           format.html {redirect_to "/inventory"}
       end 
-    end 
-    
+    end    
   end
   
 end
