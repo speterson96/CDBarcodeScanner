@@ -7,11 +7,25 @@ class InventoryController < ApplicationController
     @inventory = Inventory.all 
   end
   
-  def inventory
+  def manuallyAddItem
+  puts session['user_id'] && params['title']
+  puts params['title']
+    @inventory = Inventory.create(
+      upc: session['user_id'] && params['title'],
+      title: params['name'],
+      brand: params['brand'],
+      description: params['description'].gsub(/<\/?[^>]*>/, " "),
+      user_id: session['user_id']
+    )
+    
+    if @inventory.save
+      respond_to do |format|
+          format.html {redirect_to "/inventory"}
+      end 
+    end 
   end
   
   def addItem 
-  
     upc = params[:upc].tr('^0-9', '')
     response = RestClient.post("https://api.upcitemdb.com/prod/trial/lookup",
       { 'upc' => upc }.to_json,
