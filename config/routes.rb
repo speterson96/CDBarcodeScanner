@@ -7,12 +7,13 @@ Rails.application.routes.draw do
   root to: 'home#index'
   
   get '/inventory', to: 'inventory#index', as: 'inventory'
+  get '/manualInventory', to: 'inventory#addItemManually', as: 'manualInventory'
   get '/login', to: redirect('/auth/google_oauth2'), as: 'login'
   get '/signup', to: 'login_system#signup', as: 'signup'
   get '/userInfo', to: 'login_system#userInfo', as: 'userInfo'
   get '/reports', to: 'inventory#reports', as: 'reports'
   get '/addItemToInventory', to: 'inventory#addItem', as: 'addItemToInventory'
-  get '/addItemToInventoryManually', to: 'inventory#addItemManually', as: 'addItemToInventoryManually'
+  get '/addItemToInventoryManually', to: 'inventory#manuallyAddItem', as: 'addItemToInventoryManually'
   #Google Auth 
   get 'auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/')
