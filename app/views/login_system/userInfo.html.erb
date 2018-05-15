@@ -6,7 +6,7 @@
         <div class="user">
             <p><strong>Signed in as: </strong><%= link_to current_user.name, "https://plus.google.com/u/0/" + current_user.uid %> </p>
             <p><strong>Signed in with: </strong><%= current_user.provider.gsub!('_oauth2', '').titleize %></p>
-            <p><strong>User Image: </strong><%= image_tag(current_user.user_image, width: "40", height: "40", class: 'img-circle') %></p>
+            <p><strong>User Image: </strong><%= link_to image_tag(current_user.user_image, width: "40", height: "40", class: 'img-circle'), "https://plus.google.com/u/0/" + current_user.uid %><%=  %></p>
         </div>
   </div>
 </div>
