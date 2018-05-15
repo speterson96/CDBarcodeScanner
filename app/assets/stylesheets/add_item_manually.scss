@@ -20,7 +20,7 @@ label {
 }
 
 input[type=submit] {
-    background-color: #4CAF50;
+    background-color: rgba(140, 49, 209, 1);
     color: lavender;
     padding: 12px 20px;
     border: none;
@@ -36,19 +36,21 @@ input[type=submit]:hover {
 .container {
     border-radius: 5px;
     background-color: rgb(230, 210, 249);
-    padding: 20px;
+    padding: 15px;
 }
 
 .col-25 {
     float: left;
     width: 25%;
     margin-top: 6px;
+    padding: 15px;
 }
 
 .col-75 {
     float: left;
     width: 75%;
     margin-top: 6px;
+    padding: 15px;
 }
 
 /* Clear floats after the columns */
@@ -56,6 +58,21 @@ input[type=submit]:hover {
     content: "";
     display: table;
     clear: both;
+}
+
+.button {
+    color: rgba(255, 255, 255, 1);
+    border: purple;
+    color: lavender;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 2px;
+    float: center;
 }
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
