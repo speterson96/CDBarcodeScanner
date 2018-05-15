@@ -97,7 +97,10 @@ h2 {
   border-radius: 3px;
   background-color: #FFF;
   padding: 2px;
-  margin-bottom: 1em;
+  margin-bottom: 0 !important;
+  display: block;
+  float: none !important;
+  margin: auto;
 }
 
 .submit:hover {
