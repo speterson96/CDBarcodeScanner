@@ -1,0 +1,57 @@
+<div class="moveBelowHeader">
+</div>
+<div class="container">
+  <form action="/addItemToInventoryManually">
+    <div class="row">
+      <div class="col-25">
+        <label for="name">Name:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="name" name="name" placeholder="Name..." class="type">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="text">Brand:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="brand" name="brand" placeholder="Brand..." class="type">
+      </div>
+    </div>
+    
+
+    <div class="row">
+      <div class="col-25">
+        <label for="description">Description:</label>
+      </div>
+      <div class="col-75">
+        <textarea id="description" name="description" placeholder="Write something..." style="height:200px" class="type"></textarea>
+      </div>
+    </div>
+    
+<!--
+TODO
+    Turns out this will actually be kinda difficult to implement for displaying the image 
+    later in the inventory.
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="description">Upload Image:</label>
+      </div>
+     <div class="row">
+      <div class="col-25">
+        </br>
+      <input type="file" name="pic" accept="image/*">
+      </div>
+      </div>
+    </div>
+-->
+     <div class="button">
+     <br>
+        <input type="submit" value="Add Item!" class="manualSubmit">
+        </div>
+    </div>
+  </form>
+
+
+

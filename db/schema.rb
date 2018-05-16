@@ -13,11 +13,12 @@
 
 ActiveRecord::Schema.define(version: 20180424095526) do
 
-  create_table "inventories", id: false, force: :cascade do |t|
+  create_table "inventories", force: :cascade do |t|
     t.string "upc"
     t.string "title"
     t.string "brand"
     t.string "description"
+    t.string "image"
     t.string "user_id"
   end
 
