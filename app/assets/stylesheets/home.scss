@@ -53,18 +53,7 @@
   .carousel-caption {
     font-size: .5em;
   }
-
 }
-
-
-@media screen and (max-width: 800px) {
-  
-  .container {
-    width: 30% !important;
-  }
-
-}
-
 
 @media screen and (max-width: 1300px) {
   .container {
@@ -357,7 +346,5 @@ bodyAdd {
   margin: 0 0 100px;
 }
 
-//Carousel CSS
-@import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
 
 
