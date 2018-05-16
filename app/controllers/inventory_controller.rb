@@ -1,4 +1,5 @@
 class InventoryController < ApplicationController
+  before_filter :authenticate_user!
   before_action :index 
   
   require 'rest-client'
@@ -25,6 +26,16 @@ class InventoryController < ApplicationController
         end 
       end 
     end
+  end
+  
+  def destroy
+    @inventory = Inventory.find(params[:id])
+    
+    if params[:user_id] = session['user_id'] and @inventory.user_id = session['user_id']
+      @inventory.destroy
+    end
+    
+    redirect_to inventory_path
   end
   
   def addItem 
