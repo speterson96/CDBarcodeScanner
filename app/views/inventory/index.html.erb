@@ -25,13 +25,12 @@
 		<div id="list"> 
     <% @inventory.where("user_id = ?", session[:user_id]).each do |item| %>
       <div class="itemWrapper">
+          <div class="deleteItem"><%= button_to "Delete Item", deleteItem_path(session[:user_id] , item, item.id), method: :delete, data: {confirm: "Are you sure you want to delete this item?"} %></div>
           <p class="label">UPC: </p><p class="upcValue"><%= item.upc %></p><br>
           <p class="label">Title: </p><p class="titleValue"><%= item.title %></p><br>
           <p class="label">Brand: </p><p class="brandValue"><%= item.brand %></p><br>
           <p class="label">Description: </p><p class="descValue"><%= item.description %></p>
           <p class="hiddenImage" style="display:none"><%= item.image %></p>
-          <br>
-          <%= link_to "Delete Item", deleteItem_path(session[:user_id] , item.upc, item.id), method: :delete, data: {confirm: "Are you sure you want to delete this item?"} %>
       </div>
     <% end %> 
     </div>

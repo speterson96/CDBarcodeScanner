@@ -76,6 +76,13 @@ h2 {
   border:1px solid white;
 }
 
+.deleteItem input {
+  display: block;
+  float: right;
+  padding: 2px;
+  font-weight: bold;
+}
+
 .displayInv {
   width: 95%;
   margin:auto;
@@ -99,11 +106,10 @@ h2 {
 .submit {
   border-radius: 3px;
   background-color: #FFF;
-  padding: 2px;
-  margin-bottom: 0 !important;
+  padding: 4px;
   display: block;
-  float: none !important;
   margin: auto;
+  font-weight: bolder;
 }
 
 .submit:hover {
@@ -113,7 +119,6 @@ h2 {
 .itemWrapper {
   width:90%; 
   height: auto;
-  max-height:7em;
   overflow:hidden;
   margin: 3px auto;
   border: 3px double violet;
