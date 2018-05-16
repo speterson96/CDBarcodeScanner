@@ -51,6 +51,7 @@ h2 {
   width: 32%;
   margin:1em;
   min-height:44em;
+  max-height:44em;
   overflow:auto;
   border: 1px solid white;
 }
@@ -59,14 +60,15 @@ h2 {
   text-align: center; 
   color:violet;
   text-shadow: 0px 0px #202020;
-  font-size:1.3em;
+  font-size:1.1em;
+  padding-left:1em;
+  padding-right:1em;
   font-family: 'Handlee';
 }
 
 .itemPreview img {
   margin: 0 auto;
   margin-left:25%;
-  margin-top:1em;
   max-height: 25em;
   max-width: 20em;
   width:auto;
@@ -78,7 +80,8 @@ h2 {
   width: 95%;
   margin:auto;
   margin-bottom: 5em;
-  min-height:45em;
+  min-height:46em;
+  max-height:46em;
   overflow:auto;
   border: 1px solid white;
   background-color: #ac3b61;
@@ -107,6 +110,8 @@ h2 {
 .itemWrapper {
   width:90%; 
   height: auto;
+  max-height:7em;
+  overflow:hidden;
   margin: 3px auto;
   border: 3px double violet;
   padding:10px;
@@ -119,3 +124,4 @@ h2 {
 .itemWrapper p {
   display:inline;
 }
+

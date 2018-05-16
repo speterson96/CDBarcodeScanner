@@ -36,9 +36,9 @@
   </div>
   
   <div class="itemPreview">
+    <p class="previewLabel Pupc" style="margin:0.5em;font-size:2em"></p>
     <img src="assets/barcode.png" alt="Your item Image">
-    <p class="previewLabel Pupc"></p>
-    <p class="previewLabel Ptitle"></p>
+    <p class="previewLabel Ptitle" style="margin:1em;"></p>
     <p class="previewLabel Pbrand"></p>
     <p class="previewLabel Pdesc"></p>
     <p class="Pdefault">Select an item to view more information</p>
@@ -72,7 +72,12 @@ $(document).ready(function(){
      $(".Ptitle").text($(this).children(".titleValue").text());
      $(".Pbrand").text($(this).children(".brandValue").text());
      $(".Pdesc").text($(this).children(".descValue").text());
-     $(".itemPreview img").attr("src", $(this).children(".hiddenImage").text());
+     if ($(this).children(".hiddenImage").text() != ""){
+       $(".itemPreview img").attr("src", $(this).children(".hiddenImage").text());
+     } else {
+        $(".itemPreview img").attr("src","assets/barcode.png")
+     }
+     
      $(".Pdefault").text("");
   })
     

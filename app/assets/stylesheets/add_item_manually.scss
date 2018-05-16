@@ -6,7 +6,7 @@ body {
 }
 
 
-input[type=text], select, textarea {
+.type {
     width: 100%;
     padding: 2px;
     border: 1px solid #ccc;
@@ -19,17 +19,17 @@ label {
     display: inline-block;
 }
 
-input[type=submit] {
+.manualSubmit {
     background-color: rgba(140, 49, 209, 1);
     color: lavender;
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    float: right;
+
 }
 
-input[type=submit]:hover {
+.manualSubmit:hover {
     background-color: #45a049;
 }
 
